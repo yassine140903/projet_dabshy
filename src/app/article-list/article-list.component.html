@@ -1,0 +1,36 @@
+<div class="container">
+    <form class="filter" (ngSubmit)="applyFilter()">
+        <p>Filter :</p>
+        <input type="text" placeholder="min">
+        <input type="text" placeholder="max">
+        <select name="" id="">
+            <option value="0">sort :</option>
+            <option value="1">prix croissant</option>
+            <option value="2">prix decroissant</option>
+            <option value="1">plus recent</option>
+            <option value="2">moins recent</option>
+        </select>
+        <select name="" id="">
+            <option value="0">All Regions :</option>
+            <option *ngFor="let i of region" [value]="i"> {{ i }} </option>
+        </select>
+        <select>
+            <option value="0">All Categories :</option>
+            <ng-container *ngFor="let category of categories">
+              <optgroup [label]="category.type">
+                <option *ngFor="let item of category.items">{{ item }}</option>
+              </optgroup>
+            </ng-container>
+        </select>
+          
+        <div class="checkbox">
+            <input type="radio" name="a" id="man">man
+            <input type="radio" name="a" id="woman">woman
+        </div>
+        <button type="submit">Filter</button>
+        <button type="reset">reset</button>
+    </form>
+    <div class="listArticles">
+        <app-article *ngFor="let article of articles" [article]="article" (click)="onArticleClick(article)"></app-article>
+    </div>
+</div>

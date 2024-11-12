@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="leftside">
+        <div class="logo">
+            <img src="#" alt="logo">
+        </div>
+        <ul>
+            <li routerLink="/helpp">Help</li>
+            <li routerLink="/contact">Conctact</li>
+            <li routerLink="/about">About</li>
+        </ul>
+    </div>
+    <div class="title">
+        <h1>Dabshy</h1>
+    </div>
+    <div class="rightside">
+        <ng-container>
+            <button type="button" class="addarticle">Add-Article</button>
+        </ng-container>
+        <button type="button" class="loginBtn" *ngIf="!user.isLoggedIn" (click)="user.isLoggedIn=!user.isLoggedIn">Login</button>
+        <div class="profile" *ngIf="user.isLoggedIn" (click)="onProfileClick(user)">
+            <img src="assets/images/profilepic.png" alt="profile pic" >
+            <h5> {{ user.userName }} </h5>
+        </div>
+        <button type="button" class="logoutBtn" *ngIf="user.isLoggedIn" (click)="user.isLoggedIn=!user.isLoggedIn">LogOut</button>
+    </div>
+</div>

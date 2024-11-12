@@ -1,0 +1,61 @@
+
+.container{
+    height: 18vw;
+    width: 12vw;
+    background-color: rgb(214, 203, 203);
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0 0.5vw 0;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.container .img-container{
+    height: 65%;
+    width: 100%;
+}
+
+.img-container {
+    width: 100%; /* or set a specific width */
+    height: auto; /* Maintain aspect ratio */
+    overflow: hidden; /* Hide overflow if necessary */
+}
+
+.img-container img {
+    width: 100%; /* Scale image to fit container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.below{
+    height: 35%;
+    width: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.info{
+    display: flex;
+}
+
+.info img{
+    height: 1vw;
+    width: 1vw;
+    border-radius: 50%;
+}
+
+.articleName{
+    font-weight: 900;
+    font-size: 18px;
+    background-color: #0F0;
+    border-radius: 5px;
+    padding: 0.2vw 0.5vw;
+}
+
+.container:hover{
+    cursor: pointer;
+    background-color: #ffffffe9;
+}
