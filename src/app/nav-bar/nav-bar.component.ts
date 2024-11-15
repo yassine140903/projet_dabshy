@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProfileDataPassService } from '../../services/profileDataPass.service';
+import { AuthService } from '../../services/auth.service';
 import { User } from '../user.interface';
 
 @Component({
@@ -9,16 +10,18 @@ import { User } from '../user.interface';
   styleUrl: './nav-bar.component.css'
 })
 export class NavBarComponent {  
+  constructor(private profileService: ProfileDataPassService, public router: Router, public authService: AuthService) {}
+
+
   user : User = {
     userId : '1',
     userName : 'mhbxii',
     profileImageUrl : "assets/images/profilepic.png",
     userPhoneNumber : "+21624644429",
     userRegion : "Kebili",
-    isLoggedIn : true,
+    isLoggedIn : false,
   };
-
-  constructor(private profileService: ProfileDataPassService, private router: Router) {}
+  
 
   onProfileClick(user: User) {
     this.profileService.setProfile(user);
@@ -26,7 +29,17 @@ export class NavBarComponent {
   }
 
   goToAddArticle(){
-    this.router.navigate(["/addArticle"]);
+    if(this.authService._isLoggedIn)
+      this.router.navigate(["/addArticle"]);
+    else alert("Login First!!");
+  }
+
+  setLoginTo(){
+    if(this.router.url == '/addArticle' && this.authService._isLoggedIn)
+      this.router.navigate(["/"]);
+  
+    this.authService._isLoggedIn = !this.authService._isLoggedIn;
+ 
   }
 
 }

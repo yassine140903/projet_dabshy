@@ -1,11 +1,11 @@
 <div class="container">
     <div class="leftside">
         <div class="logo">
-            <img src="#" alt="logo">
+            <img src="assets/images/logo_0.jpg" alt="logo">
         </div>
         <ul>
             <li routerLink="">Home</li>
-            <li routerLink="/contact">Conctact</li>
+            <li routerLink="/contact">Contact</li>
             <li routerLink="/about">About</li>
         </ul>
     </div>
@@ -14,13 +14,13 @@
     </div>
     <div class="rightside">
         <ng-container>
-            <button type="button" class="addarticle" (click)="goToAddArticle()">Add-Article</button>
+            <button type="button" class="addarticle" *ngIf="this.router.url != '/addArticle'" (click)="goToAddArticle()">Add-Article</button>
         </ng-container>
-        <button type="button" class="loginBtn" *ngIf="!user.isLoggedIn" (click)="user.isLoggedIn=!user.isLoggedIn">Login</button>
-        <div class="profile" *ngIf="user.isLoggedIn" (click)="onProfileClick(user)">
-            <img src="assets/images/profilepic.png" alt="profile pic" >
+        <button type="button" class="loginBtn" *ngIf="!authService._isLoggedIn" (click)="setLoginTo()">Login</button>
+        <div class="profile" *ngIf="authService.isLoggedIn" (click)="onProfileClick(user)">
+            <img [src]="user.profileImageUrl" alt="profile pic" >
             <h5> {{ user.userName }} </h5>
         </div>
-        <button type="button" class="logoutBtn" *ngIf="user.isLoggedIn" (click)="user.isLoggedIn=!user.isLoggedIn">LogOut</button>
+        <button type="button" class="logoutBtn" *ngIf="authService._isLoggedIn" (click)="setLoginTo()">LogOut</button>
     </div>
 </div>

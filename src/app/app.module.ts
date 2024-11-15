@@ -18,6 +18,7 @@ import { ContactComponent } from './contact/contact.component';
 import { AddArticleComponent } from './add-article/add-article.component';
 import { SignupComponent } from './signup/signup.component';
 import { MyhomeComponent } from './myhome/myhome.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { MyhomeComponent } from './myhome/myhome.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
     provideClientHydration()
