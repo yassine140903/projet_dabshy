@@ -25,5 +25,9 @@ export class NavBarComponent {
     this.router.navigate(['/profile', user.userId]);
   }
 
+  goToAddArticle(){
+    this.router.navigate(["/addArticle"]);
+  }
+
 }
   

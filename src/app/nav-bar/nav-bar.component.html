@@ -4,7 +4,7 @@
             <img src="#" alt="logo">
         </div>
         <ul>
-            <li routerLink="/helpp">Help</li>
+            <li routerLink="">Home</li>
             <li routerLink="/contact">Conctact</li>
             <li routerLink="/about">About</li>
         </ul>
@@ -14,7 +14,7 @@
     </div>
     <div class="rightside">
         <ng-container>
-            <button type="button" class="addarticle">Add-Article</button>
+            <button type="button" class="addarticle" (click)="goToAddArticle()">Add-Article</button>
         </ng-container>
         <button type="button" class="loginBtn" *ngIf="!user.isLoggedIn" (click)="user.isLoggedIn=!user.isLoggedIn">Login</button>
         <div class="profile" *ngIf="user.isLoggedIn" (click)="onProfileClick(user)">

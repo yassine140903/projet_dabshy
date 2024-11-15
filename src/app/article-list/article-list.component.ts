@@ -97,7 +97,7 @@ export class ArticleListComponent {
   ];
 
   applyFilter(){
-    alert("filter done!");
+    alert("filter clicked!");
   }
   
   constructor(private articleService: ArticleService, private router: Router) {}

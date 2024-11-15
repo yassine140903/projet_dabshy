@@ -43,3 +43,20 @@
     height: 100%;
     width: 45%;
 }
+
+.container {
+    /* Set up the background image and properties */
+    background-image: url('../../assets/images/moving-bg-2.jpg');
+    background-size: cover; /* Adjust if needed */
+    background-repeat: repeat-y; /* Repeat only vertically */
+    animation: moveUp 80s linear infinite; /* Infinite loop animation */
+}
+
+@keyframes moveUp {
+    from {
+        background-position: 0 0; /* Start at the top */
+    }
+    to {
+        background-position: 0 -100vh; /* Move the background up */
+    }
+}

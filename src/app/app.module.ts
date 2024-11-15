@@ -12,10 +12,12 @@ import { FooterComponent } from './footer/footer.component';
 import { PostArticleComponent } from './post-article/post-article.component';
 import { ProfileComponent } from './profile/profile.component';
 import { FormsModule } from '@angular/forms';
-import { HomePageComponent } from './home-page/home-page.component';
 import { AboutComponent } from './about/about.component';
 import { HelppComponent } from './helpp/helpp.component';
 import { ContactComponent } from './contact/contact.component';
+import { AddArticleComponent } from './add-article/add-article.component';
+import { SignupComponent } from './signup/signup.component';
+import { MyhomeComponent } from './myhome/myhome.component';
 
 @NgModule({
   declarations: [
@@ -28,10 +30,13 @@ import { ContactComponent } from './contact/contact.component';
     FooterComponent,
     PostArticleComponent,
     ProfileComponent,
-    HomePageComponent,
+
     AboutComponent,
     HelppComponent,
-    ContactComponent
+    ContactComponent,
+    AddArticleComponent,
+    SignupComponent,
+    MyhomeComponent
   ],
   imports: [
     BrowserModule,
