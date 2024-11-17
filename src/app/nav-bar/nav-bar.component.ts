@@ -16,6 +16,7 @@ export class NavBarComponent {
   user : User = {
     userId : '1',
     userName : 'mhbxii',
+    userEmail : 'mhbxii@gmail.com',
     profileImageUrl : "assets/images/profilepic.png",
     userPhoneNumber : "+21624644429",
     userRegion : "Kebili",
@@ -34,12 +35,13 @@ export class NavBarComponent {
     else alert("Login First!!");
   }
 
-  setLoginTo(){
+  setLoginTo(b: boolean){
     if(this.router.url == '/addArticle' && this.authService._isLoggedIn)
       this.router.navigate(["/"]);
-  
-    this.authService._isLoggedIn = !this.authService._isLoggedIn;
- 
+    this.authService._isLoggedIn = b;
+    if(b){
+      this.router.navigate(["/login"]);
+    }
   }
 
 }

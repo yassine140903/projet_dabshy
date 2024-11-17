@@ -1,6 +1,6 @@
 <div class="container" *ngIf="article">
     <div class="img-container">
-        <img [src]="article.articleImageUrl" alt="*">
+        <img [src]="article.articleImageUrls[0]" alt="*">
     </div>
     <div class="below">
         <p style="color : red; font-size: 30px; font-weight: 900;"> {{ article.articlePrice }} </p>

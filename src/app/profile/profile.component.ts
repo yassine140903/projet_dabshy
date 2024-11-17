@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component } from '@angular/core';
 import { ProfileDataPassService } from '../../services/profileDataPass.service';
 import { User } from '../user.interface';
+import { AuthService } from '../../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -9,19 +10,28 @@ import { User } from '../user.interface';
   styleUrl: './profile.component.css'
 })
 export class ProfileComponent {
-  user!: User;
-  
-  constructor(
-    private route: ActivatedRoute,
-    private UserService: ProfileDataPassService
-  ) {}
+  constructor(private profileDataSrc : ProfileDataPassService, private auth : AuthService, private router : Router){};
 
-  ngOnInit(): void {
-    // Subscribe to the article data from the service
-    this.UserService.currentUser.subscribe((data) => {
-      if (data) {
-        this.user = data;
-      }
-    });
+  user :User = {
+    userId : '',
+    userName : '',
+    userEmail : '',
+    profileImageUrl : '',
+    userPhoneNumber : '',
+    userRegion : '',
+    isLoggedIn : false,
+  };;
+
+  ngOnInit(){
+    this.profileDataSrc.currentUser.subscribe((data) =>
+      {if (data) this.user = data;}
+    );
   }
+
+  logMeOut(){
+    this.auth.isLoggedIn = false;
+    this.router.navigate(["/"]);
+  }
+
+
 }

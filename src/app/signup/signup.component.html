@@ -17,13 +17,14 @@
                     <input type="email" name="email" placeholder="Email" required>
                     <input type="password" name="password" placeholder="Password" required>
                     <input type="password" name="confirmpassword" placeholder="Confirm Password" required>
+                    <input type="text" id="username" name="username" placeholder="location" required>
                     <input type="tel" name="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"  placeholder="Phone number" required>
-                    <button type="submit" class="submit-btn">Sign Up</button>
+                    <button type="submit" class="submit-btn" (click)="checkAndGo()">Sign Up</button>
                 </form>
                 
             </div>
             <div class="form-right">
-                <img src="assets/img/Earth Tones and Musical Touches_ Elegant Clothing on Coat Racks.jpg" alt="Mountains" class="form-image">
+                <img src="assets/images/signup.jpg" alt="Mountains" class="form-image">
             </div>
         </div>
     </div>

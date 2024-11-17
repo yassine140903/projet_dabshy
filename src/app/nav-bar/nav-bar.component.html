@@ -16,11 +16,11 @@
         <ng-container>
             <button type="button" class="addarticle" *ngIf="this.router.url != '/addArticle'" (click)="goToAddArticle()">Add-Article</button>
         </ng-container>
-        <button type="button" class="loginBtn" *ngIf="!authService._isLoggedIn" (click)="setLoginTo()">Login</button>
+        <button type="button" class="loginBtn" *ngIf="!authService._isLoggedIn" (click)="setLoginTo(true)">Login</button>
         <div class="profile" *ngIf="authService.isLoggedIn" (click)="onProfileClick(user)">
             <img [src]="user.profileImageUrl" alt="profile pic" >
             <h5> {{ user.userName }} </h5>
         </div>
-        <button type="button" class="logoutBtn" *ngIf="authService._isLoggedIn" (click)="setLoginTo()">LogOut</button>
+        <button type="button" class="logoutBtn" *ngIf="authService._isLoggedIn" (click)="setLoginTo(false)">LogOut</button>
     </div>
 </div>
