@@ -11,7 +11,7 @@
     background-color: antiquewhite;
 }
 
-form {
+.form {
     width: 35%;
     background: #00000079;
     display: flex;

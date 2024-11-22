@@ -20,3 +20,7 @@ html, body{
     -ms-overflow-style: none;  /* For Internet Explorer and Edge */
     scrollbar-width: none;  /* For Firefox */
 }
+
+input:focus{
+    outline: 0;
+}

@@ -1,6 +1,7 @@
+<!--app-nav-bar></app-nav-bar-->
 <div class="container"> <!-- Added container for centering -->
     <div class="product-gallery">
-        <img [src]="article.articleImageUrls[currentImageIndex]" alt="Main Product Image" class="main-image" />
+        <img [src]="mainImage" alt="Main Product Image" class="main-image" />
         <div class="thumbnail-gallery">
             <img *ngFor="let image of article.articleImageUrls" [src]="image" alt="Thumbnail" />
         </div>

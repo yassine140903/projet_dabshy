@@ -59,3 +59,34 @@
     cursor: pointer;
     background-color: #ffffffe9;
 }
+
+@media all and (max-width: 750px){
+    .container{
+        height: 110vw;
+        width: 100vw;
+        padding: 0;
+    }
+    
+    .container .img-container{
+        height: 70%;
+        width: 98%;
+    }
+    
+    .img-container img {
+        width: 100%; /* Scale image to fit container */
+        height: auto; /* Maintain aspect ratio */
+    }
+    
+    .below{
+        height: 30%;
+    }
+    
+    .info img{
+        height: 5vw;
+        width: 5vw;
+    }
+    
+    .articleName{
+        padding: 0.5vw 1vw;
+    }
+}

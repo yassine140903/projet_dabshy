@@ -14,7 +14,7 @@
     </div>
     <div class="rightside">
         <ng-container>
-            <button type="button" class="addarticle" *ngIf="this.router.url != '/addArticle'" (click)="goToAddArticle()">Add-Article</button>
+            <button type="button" class="addarticle" *ngIf="this.router.url != '/addArticle'" (click)="goToAddArticle()">+</button>
         </ng-container>
         <button type="button" class="loginBtn" *ngIf="!authService._isLoggedIn" (click)="setLoginTo(true)">Login</button>
         <div class="profile" *ngIf="authService.isLoggedIn" (click)="onProfileClick(user)">

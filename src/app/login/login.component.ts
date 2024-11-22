@@ -1,5 +1,6 @@
 
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -9,8 +10,47 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(){
+  constructor(private router :Router){}
 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  verifInput(){
+    let ok = true;
+    const emailRegex = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+.[a-zA-Z]+$/;
+
+    const email = document.getElementById("email") as HTMLInputElement;
+    if (!email.value || !emailRegex.test(email.value)) {
+      email?.style.setProperty("border-color", "red");
+      email.placeholder = "email must contain only letters and spaces!";
+      ok = false;
+    } else {
+      email?.style.setProperty("border-color", "#000");
+    }
+
+    const pwd = document.getElementById("pwd") as HTMLInputElement;
+    if (!pwd.value) {
+      pwd?.style.setProperty("border-color", "red");
+      pwd.placeholder = "pwd must not be empty!";
+      ok = false;
+    } else {
+      pwd?.style.setProperty("border-color", "#000");
+    }
+
+    if(ok){
+      this.router.navigate([""]);
+    }
   }
 
 

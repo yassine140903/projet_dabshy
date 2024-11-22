@@ -13,12 +13,12 @@
                 <form id="register" class="form" action="#" method="post">
                     <h2>Login!</h2>
                     <p>Enter your details to continue:</p>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="password" name="password" placeholder="Password" required>
+                    <input type="email" name="email" placeholder="Email" id="email" required>
+                    <input type="password" name="password" placeholder="Password" id="pwd" required>
                     
                     <a routerLink="/signup" routerLinkActive="active">Don't have an account ? Sign Up now</a>
                     
-                    <button type="submit" class="submit-btn" routerLink="/">Login</button>
+                    <button type="button" (click)="verifInput()" class="submit-btn">Login</button>
                 </form>
                 
             </div>

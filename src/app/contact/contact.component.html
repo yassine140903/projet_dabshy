@@ -4,21 +4,21 @@
     <form action="" method="post">
             <p>
                 <label for="">FullName :</label>
-                <input type="text">
+                <input type="text" id="fullName">
             </p>
             <p>
                 <label for="">PhoneNumber :</label>
-                <input type="text">
+                <input type="text" id="phoneNumber">
             </p>
             <p>
                 <label for="">Email (optional) :</label>
-                <input type="text">
+                <input type="text" id="email">
             </p>
             <p class="ptextarea">
                 <label for="">Message :</label>
-                <textarea ></textarea>
+                <textarea id="textArea"></textarea>
             </p>
-            <button type="submit">Send</button>
+            <button type="submit" (click)="verifInput()">Send</button>
     </form>
     <p></p>
 </div>
