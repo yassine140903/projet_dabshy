@@ -13,6 +13,7 @@ import { AppComponent } from './app.component';
 import { SignupComponent } from './signup/signup.component';
 import { MyhomeComponent } from './myhome/myhome.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import { AdminComponent } from './admin/admin.component';
 
 const routes: Routes = [
   {path : '', component: MyhomeComponent},
@@ -27,6 +28,7 @@ const routes: Routes = [
   {path : 'contact', component: ContactComponent},
   {path : 'addArticle', component: AddArticleComponent},
   {path : 'editProfile', component: EditProfileComponent},
+  {path : 'admin' , component:AdminComponent}
   
 ];
 

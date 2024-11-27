@@ -19,6 +19,9 @@ import { SignupComponent } from './signup/signup.component';
 import { MyhomeComponent } from './myhome/myhome.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductPageComponent } from './product/product.component';
+import { HerosectionComponent } from './herosection/herosection.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -37,13 +40,17 @@ import { ProductPageComponent } from './product/product.component';
     ContactComponent,
     AddArticleComponent,
     SignupComponent,
-    MyhomeComponent
+    MyhomeComponent,
+    HerosectionComponent,
+    AdminComponent 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    BrowserModule,
   ],
   providers: [
     provideClientHydration()

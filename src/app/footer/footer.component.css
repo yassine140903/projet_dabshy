@@ -1,47 +1,22 @@
-.container{
-    height: 10vh;
-    background-color: black;
-    color: #fff;
-}
-
-.social{
-    height: 50%;
-    color: black;
-    display: flex;
-    justify-content: center;
+.container ul{
+    padding: 20px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
 }
-
-.social ul{
-    height: 100%;
-    width: 30%;
-    display: flex;
-    justify-content: space-evenly;
+.container p{
+    font-size: 1em;
+    color: #000000;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+}
+.socials {
+    display: flex; 
     align-items: center;
 }
-
-.social ul li{
-    height: 50%;
-    width: 22%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: #fff 1px solid;
-    border-radius: 10px;
-    background-color: rgba(101, 93, 93);
-    color: #fff;
-    padding: 0.5vw 0;
-}
-
-.social ul li:hover{
-    cursor: pointer;
-    background-color: rgba(101, 93, 93, 0);
-}
-
-
-p{
-    height: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.social img{
+    padding: 10px;
+    width: 40px;
+    height: 40px;
 }

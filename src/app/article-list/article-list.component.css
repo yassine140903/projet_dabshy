@@ -2,7 +2,7 @@
     margin-top: 15vh;
     width: 100%;
     max-width: 100%;
-    background-color: rgba(255, 235, 205, 0.25);
+    background-color:white;
     display: flex;
     justify-content: space-between;
     padding: 0 1vw 5vw 1vw;
@@ -14,9 +14,14 @@
     justify-content: space-between;
     height: 50vh;
     width: 17vw;
-    background-color: rgba(23, 41, 41, 0.41);
+    background-color: white;
     padding: 2vh 1vh;
-    border-radius: 3px;
+    border: 1px solid black;
+    border-radius: 20px;   
+}
+
+.searchbar input{
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .listArticles {
@@ -25,33 +30,37 @@
     gap: 1vw;
     width: 80vw;
     max-width: 80vw;
-    background: #000000da;
     border-radius: 10px;
-    padding: 1vw;
+    padding: 0.5vw;
     position: relative;
     overflow: visible;
 }
 
 .navigationContainer {
+    margin-top: 150px;
     position: absolute;
-    bottom: -5vh; /* Adjust to place at the bottom */
+    bottom: -5vh; 
     left: 50%;
     transform: translateX(-50%); /* Center horizontally */
     display: flex; /* Flexbox to align buttons horizontally */
     justify-content: center;
     align-items: center;
+    background-color: #ffffff;
 }
   
 .pageIndex {
-margin: 0 5px; /* Adds spacing between buttons */
-padding: 5px 10px;
-border-bottom: 1px solid #000;
-background-color: #f5f5f5;
-cursor: pointer;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    margin: 0 5px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
 }
 
 .pageIndex:hover {
-background-color: #ddd;
+    background-color: #000000;
+    color: #ffffff;
 }
 
 .navigation{
@@ -59,15 +68,15 @@ background-color: #ddd;
     width: 5vh;
     bottom: -5vh;
     cursor: pointer;
-    background: #aa9;
+    background: white;
     border-radius: 50%;
 }
 
 .rightBtn, .leftBtn{
-    border-radius: 5px;
+    color: #000;
     height: 4vh;
     width: 2vw;
-    background: #fa9;
+    background: transparent;
 }
 
 h1 {
@@ -88,6 +97,13 @@ h1 {
     justify-content: space-between;
 }
 
+.minmax input{
+    display: flex;
+    justify-content: space-between;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
 .filter input[type=text]{
     height: 2vw;
     width: 7vw;
@@ -101,8 +117,10 @@ select, option{
     width: 100%;
     padding: 1vh;
     text-align: center;
-    background-color: antiquewhite;
+    color: white;
+    background-color: rgb(78, 77, 77);
     border: 0.5px solid black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .filter input[type=radio]{
@@ -113,16 +131,18 @@ select, option{
 }
 
 .filter button[type=reset]{
-    background-color: rgba(255, 228, 196, 0);
-    color: red;
-    border-color: red;
+    background-color: white;
+    color: black;
+    border-color: black;
     border-radius: 5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .filter button[type=reset]:hover{
-    background-color: red;
+    background-color: rgb(199, 5, 5);
     color: #fff;
     border-color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .filter p{
@@ -134,15 +154,17 @@ select, option{
 
 .filter button:hover{
     cursor: pointer;
-    background-color: rgba(255, 228, 196, 0);
-    color: #0f0;
-    border-color: #0f0;
+    background-color: green;
+    color: white;
 }
 
 .filter button:active{
-    background-color: #0f0;
-    color: #fff;
+    background-color: white;
+    color: black;
+    border-color: black;
+    border-radius: 5px;
 }
+
 
 .filter button[type=reset]:active{
     background-color: rgba(255, 228, 196, 0);
@@ -155,6 +177,7 @@ select, option{
     justify-content: space-evenly;
     width: 100%;
     padding: 0 3vw;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .btn{
@@ -167,15 +190,16 @@ select, option{
     padding: 1.5vh 0;
     width: 75%;
     border-radius: 5px;
-    background-color: rgb(181, 251, 190);
+    background-color: white;
     border-color: black;
     border: #000 0.1px solid;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .resetBtn{
     width: 20%;
     border-radius: 5px;
-    background-color: bisque;
+    background-color: white;
     border-color: black;
     border: #000 0.1px solid;
 }
@@ -193,6 +217,7 @@ select, option{
     border-radius: 20px;
     border: 0.2px solid black;
     padding: 0 1vw;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .searchbar input::placeholder{

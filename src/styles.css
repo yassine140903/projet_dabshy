@@ -1,4 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.google.com/specimen/Sofia');
 
 *{
     margin: 0;
@@ -24,3 +24,6 @@ html, body{
 input:focus{
     outline: 0;
 }
+
+
+

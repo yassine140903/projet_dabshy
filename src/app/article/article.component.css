@@ -2,7 +2,7 @@
 .container{
     height: 18vw;
     width: 12vw;
-    background-color: rgb(214, 203, 203);
+    background-color: white;
     display: inline-flex;
     flex-direction: column;
     align-items: center;
@@ -50,14 +50,14 @@
 .articleName{
     font-weight: 900;
     font-size: 18px;
-    background-color: #0F0;
     border-radius: 5px;
     padding: 0.2vw 0.5vw;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .container:hover{
     cursor: pointer;
-    background-color: #ffffffe9;
+    background-color:rgb(245, 243, 243);
 }
 
 @media all and (max-width: 750px){

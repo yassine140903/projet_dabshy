@@ -137,15 +137,23 @@ export class ArticleListComponent {
     }
   }
 
-  /*getNextSlice(){
-    this.sliceStart +=  this.sliceLength;
-    this.sliceEnd +=  this.sliceLength;
-  }
+  /*getNextSlice = () => {
+    this.sliceStart += this.sliceLength;
+    this.sliceEnd += this.sliceLength;
+    if (this.sliceEnd > this.articles.length) {
+        this.sliceEnd = this.articles.length;
+        this.sliceStart = this.sliceEnd - this.sliceLength;
+    }
+};
 
-  getPrevSlice(){
-    this.sliceStart -=  this.sliceLength;
-    this.sliceEnd -=  this.sliceLength;
-  }*/
+getPrevSlice = () => {
+    this.sliceStart -= this.sliceLength;
+    this.sliceEnd -= this.sliceLength;
+    if (this.sliceStart < 0) {
+        this.sliceStart = 0;
+        this.sliceEnd = this.sliceLength;
+    }
+  };*/
 
   get indexSlice(){
     return this.pageIndices.slice(this.indexStart, this.indexEnd);

@@ -1,20 +1,18 @@
 <div class="container">
     <div class="leftside">
         <div class="logo">
-            <img src="assets/images/logo_0.jpg" alt="logo">
+            <img src="assets/images/DABSHY.png" alt="logo">
         </div>
         <ul>
             <li routerLink="">Home</li>
             <li routerLink="/contact">Contact</li>
             <li routerLink="/about">About</li>
+            <li *ngIf="authService._isLoggedIn" routerLink="/admin">consult</li>
         </ul>
-    </div>
-    <div class="title">
-        <h1>Dabshy</h1>
     </div>
     <div class="rightside">
         <ng-container>
-            <button type="button" class="addarticle" *ngIf="this.router.url != '/addArticle'" (click)="goToAddArticle()">+</button>
+            <button type="button" class="addarticle" *ngIf="this.router.url != '/addArticle'" (click)="goToAddArticle()">Add Article</button>
         </ng-container>
         <button type="button" class="loginBtn" *ngIf="!authService._isLoggedIn" (click)="setLoginTo(true)">Login</button>
         <div class="profile" *ngIf="authService.isLoggedIn" (click)="onProfileClick(user)">
@@ -24,3 +22,6 @@
         <button type="button" class="logoutBtn" *ngIf="authService._isLoggedIn" (click)="setLoginTo(false)">LogOut</button>
     </div>
 </div>
+
+
+
