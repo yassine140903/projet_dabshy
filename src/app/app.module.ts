@@ -22,6 +22,7 @@ import { ProductPageComponent } from './product/product.component';
 import { HerosectionComponent } from './herosection/herosection.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AdminComponent } from './admin/admin.component';
+import { FilterComponent } from './filter/filter.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { AdminComponent } from './admin/admin.component';
     SignupComponent,
     MyhomeComponent,
     HerosectionComponent,
-    AdminComponent 
+    AdminComponent ,
+    FilterComponent
   ],
   imports: [
     BrowserModule,

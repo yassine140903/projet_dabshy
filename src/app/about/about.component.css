@@ -29,7 +29,7 @@
     padding: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
     height: 500px;
-    width:900px;
+    width:850px;
     background-color: rgb(126, 125, 125);
     opacity: 90%; ;
 }
@@ -44,4 +44,5 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 400;
     padding-top: 10px;
+    line-height: 1.3;
 }
