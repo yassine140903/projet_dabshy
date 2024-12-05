@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="leftside">
+        <div class="logo">
+            <img src="assets/images/DABSHY.png" alt="logo">
+        </div>
+        <ul>
+            <li routerLink="">Home</li>
+            <li routerLink="/contact">Contact</li>
+            <li routerLink="/about">About</li>
+            <li *ngIf="authService._isLoggedIn" routerLink="/admin">consult</li>
+        </ul>
+    </div>
+    <div class="rightside">
+        <ng-container>
+            <button type="button" class="addarticle" routerLink="/addarticle">Add Article</button>
+        </ng-container>
+        <button type="button" class="loginBtn" routerLink="/login">Login</button>
+
+    </div>
+</div>
+
+
+
